@@ -4,6 +4,7 @@ body{
   font-family: 'Nunito', sans-serif;
   background-color: white;
   color: black;
+  size: 60%;
 }
 
 .dark-mode {
