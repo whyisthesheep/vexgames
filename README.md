@@ -10,8 +10,7 @@ My attempt at a games website
 
 ## "Borrowing" (stealing code/games)
 NO YOU CAN NOT GO TO THE GAMES FOLDER AND USE THEM ON YOUR SITE
-You MUST have permission from ![3kh0](https://github.com/3kh0/) to use any of these games 
-And yes, I do have permission:
+You MUST have permission from [3kh0](https://github.com/3kh0/) to use any of these games 
 ![image](https://user-images.githubusercontent.com/77189741/202876866-ee3439d3-5c94-424e-82f2-237705eb37b1.png)
 
 ## Games
