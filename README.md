@@ -1,6 +1,7 @@
 # whyisthesheep.github.io
 
 My attempt at a games website
+[whyisthesheep.github.io](https://whyisthesheep.github.io/)
 
 ![image](https://user-images.githubusercontent.com/77189741/202876947-a0332e4b-65ac-41ea-9834-8ad428584aac.png)
 ## General
