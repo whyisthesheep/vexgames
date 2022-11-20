@@ -9,8 +9,8 @@ My attempt at a games website
 - Lightweight can be ran/deployed easily
 
 ## "Borrowing" (stealing code/games)
-NO YOU CAN NOT GO TO THE GAMES FOLDER AND USE THEM ON YOUR SITE
-You MUST have permission from [3kh0](https://github.com/3kh0/) to use any of these games 
+NO YOU CAN NOT GO TO THE GAMES FOLDER AND USE THEM ON YOUR SITE\n
+You MUST have permission from [3kh0](https://github.com/3kh0/) to use any of these games\n
 ![image](https://user-images.githubusercontent.com/77189741/202876866-ee3439d3-5c94-424e-82f2-237705eb37b1.png)
 
 ## Games
@@ -59,7 +59,7 @@ And then deploy it to `https://(yourname).github.io`
 [![Deploy to Amplify Console](https://binbashbanana.github.io/deploy-buttons/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/whyisthesheep/whyisthesheep.github.io)
 [![Run on Google Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/remade/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/BinBashBanana/whyisthesheep/whyisthesheep.github.io)
 [![Deploy to Oracle Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/remade/oraclecloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/whyisthesheep/whyisthesheep.github.io/archive/refs/heads/main.zip)
-[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F3kh0%2F3kh0.github.io) 
+[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwhyisthesheep%2Fwhyisthesheep.github.io) 
 [![Deploy with Netlify](https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/whyisthesheep/whyisthesheep.github.io)
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/whyisthesheep/whyisthesheep.github.io)
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/whyisthesheep/whyisthesheep.github.io)
