@@ -31,7 +31,7 @@ body {
   Other games:
   <br><a href="/games/townscaper/index.html">Townscaper</a>
   <br><a href="/games/crossyroad/index.html">Crossy road</a>
-  <br><a href="/games/krunker/index.html">Krunker (Blocked</a> <a href="/rt/blocked.html">More info</a>)
+  <br><a href="/games/krunker/index.html">Krunker</a> (Blocked, <a href="/rt/blocked.html">More info</a>)
   <br><a href="/games/minecraft/index.html">Minecraft 1.5.2</a>
   <br><a href="/games/superhot/index.html">Superhot</a>
   <br><a href="/games/subway-surfers/index.html">Subway Surf</a>
@@ -46,5 +46,17 @@ body {
   <br><a href="/games/slope/index.html">Slope</a>
 </center>
 <script src="/js/main.js"></script>
+<script>
+const serve = Math.floor(Math.random() * 25);
+if (serve === 0) {
+  const response = confirm("You have been randomly selected for a survey! Would you like to continue?");
+  if (response) {
+    window.location.replace("https://forms.gle/jiwepQ8dxRQfWPdx8");
+    console.log("User accepted survey")
+  } else {
+    console.warn("User denied survey");
+  }
+}
+</script>
 </body>
 </html>
