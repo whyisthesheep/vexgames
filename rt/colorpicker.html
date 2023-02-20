@@ -1,0 +1,67 @@
+<html>
+
+  <head>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+
+        var colorPicker = document.createElement('input');
+
+        colorPicker.type = 'color';
+        colorPicker.value = '#ffffff';
+
+        colorPicker.style.textAlign = 'center';
+        colorPicker.style.position = 'absolute';
+        colorPicker.style.top = '10px';
+        colorPicker.style.left = '50%';
+        colorPicker.style.transform = 'translate(-50%, 0)';
+
+
+        document.body.appendChild(colorPicker);
+
+        colorPicker.addEventListener('change', function() {
+          document.body.style.backgroundColor = colorPicker.value;
+        });
+
+        var bigText = document.createElement('div');
+        bigText.innerHTML = '#ffffff';
+        bigText.style.fontSize = '100px';
+        bigText.style.textAlign = 'center';
+        bigText.style.position = 'absolute';
+        bigText.style.top = '50%';
+        bigText.style.left = '50%';
+        bigText.style.transform = 'translate(-50%, -50%)';
+        document.body.appendChild(bigText);
+
+        colorPicker.addEventListener('change', function() {
+          bigText.innerHTML = colorPicker.value;
+        });
+
+        var bgVisibility = 'bright';
+        colorPicker.addEventListener('change', function() {
+          var r = parseInt(colorPicker.value.substring(1, 3), 16);
+          var g = parseInt(colorPicker.value.substring(3, 5), 16);
+          var b = parseInt(colorPicker.value.substring(5, 7), 16);
+          var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+          if (brightness < 125) {
+            bgVisibility = 'dark';
+          } else {
+            bgVisibility = 'bright';
+          }
+        });
+
+        colorPicker.addEventListener('change', function() {
+          if (bgVisibility === 'dark') {
+            bigText.style.color = 'white';
+          } else {
+            bigText.style.color = 'black';
+          }
+        });
+      });
+
+    </script>
+  </head>
+
+  <body>
+  </body>
+
+</html>

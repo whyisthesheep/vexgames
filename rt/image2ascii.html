@@ -1,0 +1,313 @@
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+document.body.style.backgroundColor = 'lightblue';
+
+var title = document.createElement('h1');
+title.innerHTML = 'Image2Ascii';
+title.style.fontFamily = 'monospace';
+title.style.fontSize = '50px';
+title.style.textAlign = 'center';
+document.body.appendChild(title);
+
+var fileUpload = document.createElement('input');
+fileUpload.type = 'file';
+fileUpload.accept = 'image/*';
+fileUpload.id = 'fileUpload';
+document.body.appendChild(fileUpload);
+
+var convertButton = document.createElement('button');
+convertButton.innerHTML = 'Convert';
+convertButton.onclick = function() {
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0);
+      var imageData = context.getImageData(0, 0, image.width, image.height);
+      var ascii = imageDataToAscii(imageData);
+      var asciiElement = document.createElement('pre');
+      asciiElement.innerHTML = ascii;
+      document.body.appendChild(asciiElement);
+    };
+  };
+  reader.readAsDataURL(file);
+};
+document.body.appendChild(convertButton);
+
+function imageDataToAscii(imageData) {
+  var ascii = '';
+  for (var y = 0; y < imageData.height; y++) {
+    for (var x = 0; x < imageData.width; x++) {
+      var index = (y * imageData.width + x) * 4;
+      var red = imageData.data[index];
+      var green = imageData.data[index + 1];
+      var blue = imageData.data[index + 2];
+      var alpha = imageData.data[index + 3];
+      var brightness = (red + green + blue) / 3;
+      var character = ' ';
+      if (brightness > 230) {
+        character = ' ';
+      } else if (brightness > 200) {
+        character = '.';
+      } else if (brightness > 180) {
+        character = '*';
+      } else if (brightness > 160) {
+        character = ':';
+      } else if (brightness > 130) {
+        character = 'o';
+      } else if (brightness > 100) {
+        character = '&';
+      } else if (brightness > 70) {
+        character = '8';
+      } else if (brightness > 50) {
+        character = '#';
+      } else {
+        character = '@';
+      }
+      ascii += character;
+    }
+    ascii += '\n';
+  }
+  return ascii;
+}
+
+convertButton.onclick = function() {
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0);
+      var imageData = context.getImageData(0, 0, image.width, image.height);
+      var ascii = imageDataToAscii(imageData);
+      resultBox.innerHTML = ascii;
+    };
+  };
+  reader.readAsDataURL(file);
+};
+
+convertButton.onclick = function() {
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0);
+      var imageData = context.getImageData(0, 0, image.width, image.height);
+      var ascii = imageDataToAscii(imageData);
+      resultBox.innerHTML = ascii;
+      resultBox.style.width = image.width + 'px';
+      resultBox.style.height = image.height + 'px';
+    };
+  };
+  reader.readAsDataURL(file);
+};
+
+convertButton.onclick = function() {
+  document.body.style.backgroundColor = 'white';
+};
+
+convertButton.onclick = function() {
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0);
+      var imageData = context.getImageData(0, 0, image.width, image.height);
+      var ascii = imageDataToAscii(imageData);
+      var asciiElement = document.createElement('pre');
+      asciiElement.innerHTML = ascii;
+      document.body.appendChild(asciiElement);
+    };
+  };
+  reader.readAsDataURL(file);
+};
+
+var clearButton = document.createElement('button');
+clearButton.innerHTML = 'Clear';
+clearButton.onclick = function() {
+  while (document.body.firstChild) {
+    document.body.removeChild(document.body.firstChild);
+  }
+  document.body.style.backgroundColor = 'lightblue';
+  document.body.appendChild(title);
+  document.body.appendChild(fileUpload);
+  document.body.appendChild(convertButton);
+  document.body.appendChild(clearButton);
+};
+document.body.appendChild(clearButton);
+
+var halfButton = document.createElement('button');
+halfButton.innerHTML = 'Half';
+halfButton.onclick = function() {
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width / 2;
+      canvas.height = image.height / 2;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0, image.width / 2, image.height / 2);
+      var imageData = context.getImageData(0, 0, image.width / 2, image.height / 2);
+      var ascii = imageDataToAscii(imageData);
+      var asciiElement = document.createElement('pre');
+      asciiElement.innerHTML = ascii;
+      document.body.appendChild(asciiElement);
+    };
+  };
+  reader.readAsDataURL(file);
+};
+document.body.appendChild(halfButton);
+
+var quarterButton = document.createElement('button');
+quarterButton.innerHTML = 'Quarter';
+quarterButton.onclick = function() {
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width / 4;
+      canvas.height = image.height / 4;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0, image.width / 4, image.height / 4);
+      var imageData = context.getImageData(0, 0, image.width / 4, image.height / 4);
+      var ascii = imageDataToAscii(imageData);
+      var asciiElement = document.createElement('pre');
+      asciiElement.innerHTML = ascii;
+      document.body.appendChild(asciiElement);
+    };
+  };
+  reader.readAsDataURL(file);
+};
+document.body.appendChild(quarterButton);
+
+halfButton.onclick = function() {
+  while (document.body.firstChild) {
+    document.body.removeChild(document.body.firstChild);
+  }
+  document.body.style.backgroundColor = 'white';
+  document.body.appendChild(title);
+  document.body.appendChild(fileUpload);
+  document.body.appendChild(convertButton);
+  document.body.appendChild(clearButton);
+  document.body.appendChild(halfButton);
+  document.body.appendChild(quarterButton);
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width / 2;
+      canvas.height = image.height / 2;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0, image.width / 2, image.height / 2);
+      var imageData = context.getImageData(0, 0, image.width / 2, image.height / 2);
+      var ascii = imageDataToAscii(imageData);
+      var asciiElement = document.createElement('pre');
+      asciiElement.innerHTML = ascii;
+      document.body.appendChild(asciiElement);
+    };
+  };
+  reader.readAsDataURL(file);
+};
+
+clearButton.onclick = function() {
+  location.reload();
+};
+
+quarterButton.onclick = function() {
+  while (document.body.firstChild) {
+    document.body.removeChild(document.body.firstChild);
+  }
+  document.body.style.backgroundColor = 'white';
+  document.body.appendChild(title);
+  document.body.appendChild(fileUpload);
+  document.body.appendChild(convertButton);
+  document.body.appendChild(clearButton);
+  document.body.appendChild(halfButton);
+  document.body.appendChild(quarterButton);
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width / 4;
+      canvas.height = image.height / 4;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0, image.width / 4, image.height / 4);
+      var imageData = context.getImageData(0, 0, image.width / 4, image.height / 4);
+      var ascii = imageDataToAscii(imageData);
+      var asciiElement = document.createElement('pre');
+      asciiElement.innerHTML = ascii;
+      document.body.appendChild(asciiElement);
+    };
+  };
+  reader.readAsDataURL(file);
+};
+
+var tabButton = document.createElement('button');
+tabButton.innerHTML = 'Tab';
+tabButton.onclick = function() {
+  var file = document.getElementById('fileUpload').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var image = new Image();
+    image.src = e.target.result;
+    image.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = image.height;
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0);
+      var imageData = context.getImageData(0, 0, image.width, image.height);
+      var ascii = imageDataToAscii(imageData);
+      var asciiElement = document.createElement('pre');
+      asciiElement.innerHTML = ascii;
+      var newTab = window.open();
+      newTab.document.body.appendChild(asciiElement);
+    };
+  };
+  reader.readAsDataURL(file);
+};
+document.body.appendChild(tabButton);
+});
+        </script>
+    </head>
+    <body style="margin: 0;">
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+document.body.style.backgroundColor = 'lightblue';
+
+var title = document.createElement('h1');
+title.innerHTML = 'ImageGenerator';
+title.style.textAlign = 'center';
+document.body.appendChild(title);
+
+var input = document.createElement('input');
+input.type = 'text';
+input.placeholder = 'Image prompt';
+input.style.textAlign = 'center';
+input.style.margin = 'auto';
+input.style.display = 'block';
+document.body.appendChild(input);
+
+var button = document.createElement('button');
+button.innerHTML = 'Generate';
+button.style.margin = 'auto';
+button.style.display = 'block';
+document.body.appendChild(button);
+
+button.onclick = function() {
+  var prompt = input.value;
+  console.log(prompt);
+}
+
+setInterval(function() {
+  var randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+  title.style.fontFamily = randomFont;
+}, 10000);
+
+var clearImagesButton = document.createElement('button');
+clearImagesButton.innerHTML = 'Clear images';
+clearImagesButton.style.margin = 'auto';
+clearImagesButton.style.display = 'block';
+document.body.appendChild(clearImagesButton);
+clearImagesButton.onclick = function() {
+  var images = document.getElementsByTagName('img');
+  for (var i = 0; i < images.length; i++) {
+    document.body.removeChild(images[i]);
+  }
+}
+
+var br = document.createElement('br');
+document.body.appendChild(br);
+
+button.onclick = function() {
+  var prompt = input.value;
+  if (prompt == '') {
+    return;
+  }
+  var image = document.createElement('img');
+  image.src = 'https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif';
+  image.style.margin = 'auto';
+  image.style.display = 'block';
+  document.body.appendChild(image);
+  image.src = 'https://image.pollinations.ai/prompt/' + prompt;
+}
+
+var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+var konamiCodeIndex = 0;
+document.onkeydown = function(e) {
+  if (e.keyCode == konamiCode[konamiCodeIndex]) {
+    konamiCodeIndex++;
+  } else {
+    konamiCodeIndex = 0;
+  }
+  if (konamiCodeIndex == konamiCode.length) {
+    while (document.body.firstChild) {
+      document.body.removeChild(document.body.firstChild);
+    }
+    var image = document.createElement('img');
+    image.src = 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg';
+    image.style.width = '100%';
+    image.style.height = '100%';
+    document.body.appendChild(image);
+  }
+}
+});
+        </script>
+    </head>
+    <body style="margin: 0;">
+    </body>
+</html>
