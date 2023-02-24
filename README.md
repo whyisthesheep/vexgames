@@ -2,7 +2,8 @@
 
 My attempt at a games website <br/>[https://vexgames.online/](https://vexgames.online/)
 
-![image](https://user-images.githubusercontent.com/77189741/202876947-a0332e4b-65ac-41ea-9834-8ad428584aac.png)
+![image](![image](https://user-images.githubusercontent.com/77189741/221173500-261e7788-0ebe-40bd-af47-51aedea83a1d.png)
+)
 ## General
 - Completely backendless so can be ran on github
 - Easy and no node.js or anything 
