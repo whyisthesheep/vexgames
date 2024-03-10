@@ -1,6 +1,6 @@
 # whyisthesheep.github.io
 
-My attempt at a games website <br/>[https://vexgames.online/](https://vexgames.online/)
+My attempt at a games website
 
 ![image](https://user-images.githubusercontent.com/77189741/222385952-fdd55c60-44f2-4546-8a8f-a8d27a0a7fca.png)
 
@@ -9,10 +9,10 @@ My attempt at a games website <br/>[https://vexgames.online/](https://vexgames.o
 - Easy and no node.js or anything 
 - Lightweight can be ran/deployed easily
 
-## "Borrowing" (stealing code/games)
+## Reusing the games
 NO YOU CAN NOT GO TO THE GAMES FOLDER AND USE THEM ON YOUR SITE
 
-You MUST have permission from [3kh0](https://github.com/3kh0/) to use any of these games
+You MUST have permission from [3kh0](https://github.com/3kh0/) for most of these games
 
 ![image](https://user-images.githubusercontent.com/77189741/202876866-ee3439d3-5c94-424e-82f2-237705eb37b1.png)
 
@@ -32,6 +32,7 @@ You MUST have permission from [3kh0](https://github.com/3kh0/) to use any of the
 - [x] Subway Surf
 - [x] 1v1.lol
 - [x] GBA Emulator
+- [x] More
 
 ## Features
 - [x] Incognito name
@@ -43,8 +44,8 @@ You MUST have permission from [3kh0](https://github.com/3kh0/) to use any of the
 
 ### Run locally
 First
-`git clone https://whyisthesheep.github.io/`
-Then just run index.html
+`git clone https://github.com/whyisthesheep/whyisthesheep.github.io/`
+Then just host it with something
 
 ### Run publicly
 
@@ -54,15 +55,3 @@ Firstly fork this project
 Name your version `(yourname).github.io`
 And then deploy it to `https://(yourname).github.io`
 
-#### Other providers (replit etc)
-[![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/whyisthesheep/whyisthesheep.github.io)
-[![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://github.com/whyisthesheep/whyisthesheep.github.io)
-[![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/whyisthesheep/whyisthesheep.github.io)
-[![Deploy to IBM Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/remade/ibmcloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/whyisthesheep/whyisthesheep.github.io)
-[![Deploy to Amplify Console](https://binbashbanana.github.io/deploy-buttons/buttons/remade/amplifyconsole.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/whyisthesheep/whyisthesheep.github.io)
-[![Run on Google Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/remade/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/BinBashBanana/whyisthesheep/whyisthesheep.github.io)
-[![Deploy to Oracle Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/remade/oraclecloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/whyisthesheep/whyisthesheep.github.io/archive/refs/heads/main.zip)
-[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwhyisthesheep%2Fwhyisthesheep.github.io) 
-[![Deploy with Netlify](https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/whyisthesheep/whyisthesheep.github.io)
-[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/whyisthesheep/whyisthesheep.github.io)
-[![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/whyisthesheep/whyisthesheep.github.io)
