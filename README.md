@@ -44,7 +44,7 @@ You MUST have permission from [3kh0](https://github.com/3kh0/) for most of these
 
 ### Run locally
 First
-`git clone https://github.com/whyisthesheep/whyisthesheep.github.io/`
+`git clone https://github.com/whyisthesheep/vexgames/`
 Then just host it with something
 
 ### Run publicly
