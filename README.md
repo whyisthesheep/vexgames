@@ -1,6 +1,6 @@
 # whyisthesheep.github.io
 
-My attempt at a games website
+My attempt at a games website. Licenced under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). 
 
 ![image](https://user-images.githubusercontent.com/77189741/222385952-fdd55c60-44f2-4546-8a8f-a8d27a0a7fca.png)
 
